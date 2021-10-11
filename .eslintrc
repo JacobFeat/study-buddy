@@ -2,9 +2,9 @@
     "extends": ["react-app", "react-app/jest", "prettier"],
     "plugins": ["prettier"],
     "rules": {
-        "prettier/prettier": ["error", {
+        "prettier/prettier": ["warn", {
             "singleQuote": true,
-            "endOfLine": "auto"
+            "printWidth": 150
             }]
     },
     "env": {
