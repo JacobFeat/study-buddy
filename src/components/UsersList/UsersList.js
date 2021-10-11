@@ -1,7 +1,6 @@
 import React from 'react';
 import { users } from 'data/users';
 import UsersListItem from 'components/UsersListItem/UsersListItem';
-import PropTypes from 'prop-types';
 
 const UsersList = () => (
   <div>
@@ -12,7 +11,5 @@ const UsersList = () => (
     </ul>
   </div>
 );
-
-UsersList.propTypes = {};
 
 export default UsersList;
