@@ -7,13 +7,13 @@ import StyledInfo from 'components/atoms/Info/StyledInfo';
 
 const showIndex = (index) => alert(`This is student #${index + 1}`);
 
-const UsersListItem = ({ index, userData: { average, name, attendance = '0%' } }) => (
+const UsersListItem = ({ deleteUser, index, userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <StyledAverage value={average}>{average}</StyledAverage>
     <StyledInfo>
       <p>
         {name}
-        <Button onClick={() => showIndex(index)} />
+        <Button onClick={() => deleteUser(name)} />
       </p>
       <p>attendance: {attendance}</p>
     </StyledInfo>
