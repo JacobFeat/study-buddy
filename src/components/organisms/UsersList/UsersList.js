@@ -7,8 +7,8 @@ import { Wrapper, StyledList } from './UserListStyles';
 const UsersList = () => (
   <Wrapper>
     <StyledList>
-      {users.map((userData) => (
-        <UsersListItem userData={userData} />
+      {users.map((userData, i) => (
+        <UsersListItem index={i} userData={userData} />
       ))}
     </StyledList>
   </Wrapper>

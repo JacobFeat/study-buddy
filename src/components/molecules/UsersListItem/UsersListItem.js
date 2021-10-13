@@ -5,14 +5,18 @@ import { Wrapper } from './UserListItem.styles';
 import StyledAverage from 'components/atoms/Average/StyledAverage';
 import StyledInfo from 'components/atoms/Info/StyledInfo';
 
-const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
+const showIndex = (index) => alert(`This is student #${index + 1}`);
+
+const UsersListItem = ({ index, userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <StyledAverage value={average}>{average}</StyledAverage>
     <StyledInfo>
-      <p>{name}</p>
+      <p>
+        {name}
+        <Button onClick={() => showIndex(index)} />
+      </p>
       <p>attendance: {attendance}</p>
     </StyledInfo>
-    <Button />
   </Wrapper>
 );
 
