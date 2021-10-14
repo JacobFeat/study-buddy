@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { users as usersData } from 'data/users';
 import styled from 'styled-components';
 import UsersListItem from 'components/molecules/UsersListItem/UsersListItem';
-import { Wrapper, StyledList } from './UserListStyles';
+import { Wrapper, StyledList, StyledTitle } from './UserListStyles';
+import FormField from 'components/molecules/FormField/FormField';
 
 const mockAPI = () => {
   return new Promise((resolve, reject) => {
@@ -36,14 +37,23 @@ const UsersList = () => {
   };
 
   return (
-    <Wrapper>
-      <h1>{isLoading ? 'Loading...' : 'Users List'}</h1>
-      <StyledList>
-        {users.map((userData, i) => (
-          <UsersListItem deleteUser={deleteUser} index={i} userData={userData} />
-        ))}
-      </StyledList>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <StyledTitle>Add new student</StyledTitle>
+        <FormField label="Name" id="name" name="name" />
+        <FormField label="Attendance" id="name" name="name" />
+        <FormField label="Average" id="name" name="name" />
+        <button>Add</button>
+      </Wrapper>
+      <Wrapper>
+        <StyledTitle>{isLoading ? 'Loading...' : 'Users List'}</StyledTitle>
+        <StyledList>
+          {users.map((userData, i) => (
+            <UsersListItem deleteUser={deleteUser} index={i} userData={userData} />
+          ))}
+        </StyledList>
+      </Wrapper>
+    </>
   );
 };
 
