@@ -10,15 +10,15 @@ const Wrapper = styled.div`
   align-items: flex-start;
 
   ${Label} {
-    margin: 2px;
+    margin: 10px 0 2px;
   }
 `;
 
-const FormField = ({ label, name, id, type = 'text' }) => {
+const FormField = ({ onChange, value, label, name, id, type = 'text' }) => {
   return (
     <Wrapper>
       <Label htmlFor={id}>{label}</Label>
-      <Input name={name} id={id} type={type} />
+      <Input name={name} id={id} type={type} value={value} onChange={onChange} />
     </Wrapper>
   );
 };

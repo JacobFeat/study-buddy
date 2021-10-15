@@ -5,8 +5,6 @@ import { Wrapper } from './UserListItem.styles';
 import StyledAverage from 'components/atoms/Average/StyledAverage';
 import StyledInfo from 'components/atoms/Info/StyledInfo';
 
-const showIndex = (index) => alert(`This is student #${index + 1}`);
-
 const UsersListItem = ({ deleteUser, index, userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <StyledAverage value={average}>{average}</StyledAverage>
