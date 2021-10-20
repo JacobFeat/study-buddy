@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import UsersListItem from 'components/molecules/UsersListItem/UsersListItem';
-import { StyledList, StyledTitle } from './UserListStyles';
-import FormField from 'components/molecules/FormField/FormField';
-import Button from 'components/atoms/Button/Button';
+import { StyledList } from './UserListStyles';
+import StyledTitle from 'components/atoms/Title/Title';
 import { UserShape } from 'types';
 
-const UsersList = ({ users, deleteUser }) => {
+const UsersList = ({ users }) => {
   return (
     <>
       <>
+        <StyledTitle>Students list</StyledTitle>
         <StyledList>
           {users.map((userData, i) => (
-            <UsersListItem deleteUser={deleteUser} index={i} key={i} userData={userData} />
+            <UsersListItem index={i} key={i} userData={userData} />
           ))}
         </StyledList>
       </>
@@ -23,7 +22,6 @@ const UsersList = ({ users, deleteUser }) => {
 
 UsersList.propTypes = {
   users: PropTypes.arrayOf(PropTypes.shape(UserShape)),
-  deleteUser: PropTypes.func,
 };
 
 export default UsersList;
