@@ -28,11 +28,6 @@ export const ArticleWrapper = styled(ViewWrapper)`
   p {
     line-height: 1.4;
   }
-
-  img {
-    max-height: 180px;
-    max-width: 100%;
-  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -44,5 +39,18 @@ export const TitleWrapper = styled.div`
   p {
     margin: 0;
     font-size: ${({ theme }) => theme.fontSize.m};
+  }
+`;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+
+  p {
+  }
+
+  img {
+    margin: 12px 0 0 20px;
+    max-width: 45%;
+    order: 0;
   }
 `;

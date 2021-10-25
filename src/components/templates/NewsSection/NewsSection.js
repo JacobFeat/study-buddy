@@ -1,4 +1,4 @@
-import { Wrapper, NewsSectionHeader, ArticleWrapper, TitleWrapper } from './NewsSection.styles';
+import { Wrapper, NewsSectionHeader, ArticleWrapper, TitleWrapper, ContentWrapper } from './NewsSection.styles';
 import Button from 'components/atoms/Button/Button';
 
 const data = [
@@ -38,8 +38,10 @@ const NewsSection = (props) => {
             <h3>{title}</h3>
             <p>{category}</p>
           </TitleWrapper>
-          <p>{content}</p>
-          {image ? <img src={image} alt="article" /> : null}
+          <ContentWrapper>
+            <p>{content}</p>
+            {image ? <img src={image} alt="article" /> : null}
+          </ContentWrapper>
           <Button isBig>Click me</Button>
         </ArticleWrapper>
       ))}
