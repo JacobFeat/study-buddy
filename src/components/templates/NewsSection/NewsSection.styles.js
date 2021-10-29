@@ -43,14 +43,13 @@ export const TitleWrapper = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  display: flex;
+  /* display: flex; */
 
   p {
   }
 
   img {
-    margin: 12px 0 0 20px;
-    max-width: 45%;
-    order: 0;
+    max-width: 50%;
+    object-fit: cover;
   }
 `;
