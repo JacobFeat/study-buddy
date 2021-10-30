@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   justify-content: flex-start;
   padding: 10px 50px;
   overflow-y: scroll;
+  position: relative;
 `;
 
 export const NewsSectionHeader = styled.h3`
@@ -51,5 +52,6 @@ export const ContentWrapper = styled.div`
   img {
     max-width: 50%;
     object-fit: cover;
+    border-radius: 10px;
   }
 `;

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import UsersListItem from 'components/molecules/UsersListItem/UsersListItem';
 import { StyledList } from './UserListStyles';
 import StyledTitle from 'components/atoms/Title/Title';
-import { UserShape } from 'types';
 import { UsersContext } from 'providers/UsersProvider';
 
 const UsersList = () => {
@@ -12,7 +11,7 @@ const UsersList = () => {
   return (
     <>
       <>
-        <StyledTitle>Students list</StyledTitle>
+        <StyledTitle>{users.length > 0 ? 'Students list' : 'Students are unavailable'}</StyledTitle>
         <StyledList>
           {users.map((userData, i) => (
             <UsersListItem index={i} key={i} userData={userData} />

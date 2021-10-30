@@ -1,16 +1,16 @@
 export const users = [
   {
-    name: 'Andrzej Pasecki',
+    name: 'Dillian Whyte',
     attendance: '39%',
     average: '2.3',
   },
   {
-    name: 'Jakub Kita',
+    name: 'Deontay Wilder',
     attendance: '21%',
     average: '3.3',
   },
   {
-    name: 'Adam Małysz',
+    name: 'Oleksandr Usyk',
     attendance: '79%',
     average: '4.2',
   },
@@ -25,7 +25,7 @@ export const users = [
     average: '4.9',
   },
   {
-    name: 'Adrian Polak',
+    name: 'Mike Tyson',
     attendance: '11%',
     average: '3.2',
   },
