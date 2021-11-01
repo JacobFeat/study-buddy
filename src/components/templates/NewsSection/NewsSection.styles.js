@@ -39,7 +39,7 @@ export const TitleWrapper = styled.div`
 
   p {
     margin: 0;
-    font-size: ${({ theme }) => theme.fontSize.m};
+    font-size: ${({ theme }) => theme.fontSize.l};
   }
 `;
 
