@@ -41,21 +41,23 @@ const NewsSection = (props) => {
     <Wrapper>
       <NewsSectionHeader>News feed section</NewsSectionHeader>
       {articles.length > 0 ? (
-        articles.map(({ id, title, category, content, image = null }) => (
-          <ArticleWrapper key={id}>
-            <TitleWrapper>
-              <h3>{title}</h3>
-              <p>{category}</p>
-            </TitleWrapper>
-            <ContentWrapper>
-              <p>{content}</p>
-              {image ? <img src={image.url} alt="article" /> : null}
-            </ContentWrapper>
-            <Button isBig withoutMarginBottom>
-              Click me
-            </Button>
-          </ArticleWrapper>
-        ))
+        articles.map(({ id, title, category, content, image = null }) => {
+          return (
+            <ArticleWrapper key={id}>
+              <TitleWrapper>
+                <h3>{title}</h3>
+                <p>{category}</p>
+              </TitleWrapper>
+              <ContentWrapper>
+                <p>{content}</p>
+                {image ? <img src={image.url} alt="article" /> : null}
+              </ContentWrapper>
+              <Button isBig withoutMarginBottom>
+                Click me
+              </Button>
+            </ArticleWrapper>
+          );
+        })
       ) : error ? (
         <NewsSectionHeader> {error} </NewsSectionHeader>
       ) : (

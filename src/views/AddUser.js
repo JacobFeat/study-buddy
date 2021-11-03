@@ -1,6 +1,5 @@
-import React, { useState, useContext, useReducer, useRef, useEffect } from 'react';
+import React, { useContext } from 'react';
 import StyledTitle from 'components/atoms/Title/Title';
-import StyledError from 'components/atoms/Error/Error';
 import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
 import FormField from 'components/molecules/FormField/FormField';
 import Button from 'components/atoms/Button/Button';

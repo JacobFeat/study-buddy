@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import UsersListItem from 'components/molecules/UsersListItem/UsersListItem';
 import { StyledList } from './UserListStyles';
 import StyledTitle from 'components/atoms/Title/Title';
