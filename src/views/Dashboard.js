@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, Redirect } from 'react-router-dom';
 import UsersList from 'components/organisms/UsersList/UsersList';
 
 const Dashboard = () => {
   const [students, setStudents] = useState([]);
   const [groups, setGroups] = useState([]);
   const { id } = useParams();
+
+  // if (!id && groups.length > 0) return <Redirect to={`/group/${groups[0]}`} />
 
   useEffect(() => {
     axios
