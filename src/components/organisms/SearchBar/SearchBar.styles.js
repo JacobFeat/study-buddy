@@ -8,7 +8,7 @@ export const SearchBarWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 38px;
+  padding: 0 40px;
 
   ${Input} {
     font-size: ${({ theme }) => theme.fontSize.l};
